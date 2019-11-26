@@ -62,12 +62,21 @@ np.linspace(0,100,5,False,True) # 0'dan başlayıp 80'de biten (100 dahil olmad�
 
 #Random = Rastgele sayılar üretmek için kullanılan fonksiyondur.
 
-#randint => rastgele integer sayılar üretmek için
+# numpy.random.randint => rastgele integer sayılar üretmek için kulanılır.
 np.random.randint(10) # 0 ile 10 arasında 10'dan küçük sayılar arasından rastgele bir integer sayı döner.
 np.random.randint(0,10)  # 0 ile 10 arasında 10'dan küçük sayılar arasından rastgele bir integer sayı döner.
 np.random.randint(0,10,5) # 0 ile 10 arasında 10'dan küçük sayılar arasından rastgele  5 tane integer sayı döner.
 np.random.randint(0,10,(2,4)) # 0 ile 10 arasında 10'dan küçük sayılar arasından rastgele 2x4 tane integer sayıdan oluşan bir matris döner.
 
-#
+# numpy.random.rand => Sıfır ile 1 arasında float sayılar üretmek için kullanılır. Eşit dağılımlı bir array yada matris oluşturur.
+np.random.rand(5) #  5 adet sayı içeren bir array üretir.
+np.random.rand(5,2) # 5x2 rastgele sayılardan oluşan bir matris oluşturur. 
 
-# LINSPACE => https://medium.com/deep-learning-turkiye/t%C3%BCrkiyenin-en-kapsaml%C4%B1-numpy-tutoriali-b22e800418ed
+#numpy.random.randn => Normal (Gaussian) dağılımlı rastgele sayı yada sayı dizileri oluşturur. Oluşturulan sayı dizisinin ortalaması 0 sapması 1 olur.
+
+np.random.randn() # Rastgele - yada + bir float sayı üretir
+np.random.randn(3) # Rastgele - yada + 3 float sayı üretir
+np.random.randn(3,2) # Rastgele - yada + 3x2 float bir matris üretir
+
+# RESHAPE 
+
