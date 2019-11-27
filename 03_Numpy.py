@@ -1,3 +1,6 @@
+# Evren Arslan @earslan
+
+
 import numpy as np 
 
 Data=[[1,2,3],[4,5,6],[7,8,9]] # Burada standart bir array yarattık.
@@ -78,5 +81,81 @@ np.random.randn() # Rastgele - yada + bir float sayı üretir
 np.random.randn(3) # Rastgele - yada + 3 float sayı üretir
 np.random.randn(3,2) # Rastgele - yada + 3x2 float bir matris üretir
 
-# RESHAPE 
+# RESHAPE = Elimizdeki array için istediğimiz biçimi vermemizi sağlar
+
+X=np.arange(100) # 100 elemanlı bir array yarattık
+print(X)
+
+X_matris=X.reshape(10,10) # X array'ı 10x10 matris haline getirdi.
+print(X_matris)
+
+Y=np.reshape(X_matris,100) # 10x10 matrisi 100 elemanlı bir array haline getirdi. 
+print(Y)
+
+# Min, max, toplam işlemleri
+
+print(X_matris.min()) # matris içindeki en küçük değeri verir
+
+print(X_matris.max()) # matris içindeki en büyük değeri verir
+
+print(X_matris.sum()) # matris içindeki tüm elemanların toplamını verir
+
+print(X_matris.cumsum()) # matris içindeki elemanların kümüatif toplamını verir
+
+
+print(np.argmax(X_matris)) # matris içindeki en büyük değerin indexini verir
+
+print(np.argmin(X_matris)) # matris içindeki en küçük değerin indexini verir
+
+# Matrisin determinantı
+# Bir matrisin detarminantı o matrisi sabit bir sayıya eşleyen fonksiyondur. 
+# A=[[a,b],[c,d]] matirisini determinantı |A|=a*d-b*c şeklinde hesaplanır.
+
+A=np.array([[1,2],[3,4]])
+
+print(A)
+
+print(np.linalg.det(A)) # A matrisinin detarmınantını hesaplar
+
+#İstatistiksel değerler
+
+print(np.std(X_matris)) # X_marisinin standart sapması
+
+print(np.var(X_matris))
+
+# Belirli bir değere göre karşılaştırma yapmak
+
+print(X_matris>30) # 30 değerinden büyük olan değerleri True olarak verir
+
+Y=X_matris[(X_matris>30)==1] # X_matrisi içerisindeki değeri 30'dan büyük olanlar ile yeni bir matris yarattık.
+print(Y)
+
+# Bir matrisin transpozunu almak. Satırlar ile sütunları yer değiştirmek
+
+X_matris_T=np.transpose(X_matris) # X_matrisinin transpose değerini alır.
+
+print(X_matris_T)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
