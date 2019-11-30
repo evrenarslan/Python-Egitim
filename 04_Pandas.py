@@ -24,14 +24,17 @@ print(araba)
 
 # CSV dosyasıdan dataframe oluşturmak
 
-bisikletler= pd.read_csv('bisikler.csv') # kod ile aynı dizinde olan csv dosyanı okuyarak bie df yaratır.
+df_nufus= pd.read_csv('sehir_nufus.csv') # kod ile aynı dizinde olan csv dosyanı okuyarak bie df yaratır.
 
-print(bisikletler)
+print(df_nufus)
+
+
 
 
 #Eğer dosya içindeki ilk kolon index kolonu olacak ise
-bisikletler= pd.read_csv('bisikler.csv',index_col=0) # BU parametre ile ilk kolonun index olmasını sağladık.
+#bisikletler= pd.read_csv('bisikletler.csv',index_col=0) # Bu parametre ile ilk kolonun index olmasını sağladık.
 
+# 
 
 
 
