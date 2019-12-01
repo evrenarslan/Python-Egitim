@@ -47,5 +47,6 @@ print(df_nufus[0:10]) # ilk 10 satırı listeler burada çift tırnak çalışma
 print(type(df_nufus[0:10])) # 'pandas.core.frame.DataFrame'
 
 # loc & iloc => loc label tabanlı "kolonların isimlerini verek" iloc ise sayı tabanlı "kolon ve satırların sıra numarasını vererek sorgulama sağlar"
-#print(df_nufus.loc["Bolge"])
+print(df_nufus.iloc[0]) # Sıfır numaralı satırın tüm verilerini getirir
+print(df_nufus.iloc[0:100,1:3]) # ilk 100 kaydı getirir ilk 3 kolon ile
 
