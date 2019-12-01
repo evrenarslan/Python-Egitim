@@ -28,13 +28,24 @@ df_nufus= pd.read_csv('sehir_nufus.csv') # kod ile aynı dizinde olan csv dosyan
 
 print(df_nufus)
 
-
-
-
 #Eğer dosya içindeki ilk kolon index kolonu olacak ise
-#bisikletler= pd.read_csv('bisikletler.csv',index_col=0) # Bu parametre ile ilk kolonun index olmasını sağladık.
+#df_nufus= pd.read_csv('sehir_nufus.csv',index_col=0) # Bu parametre ile ilk kolonun index olmasını sağladık.
 
-# 
+# Dataframe içerinden değerleri listelemek.
 
+print(df_nufus["Bolge"]) # Bolge kolonunu bir liste olarak döker
+print(type(df_nufus['Bolge'])) # Tek bir köşeli parantez içerisinde getirilen veriler bir array olaak dönerler
 
+print(df_nufus[['Bolge']]) # Burada yine Bolge kolonu gelir ama dataframe olarak gelir
+print(type(df_nufus[["Bolge"]])) #  'pandas.core.frame.DataFrame' olarak dönüş yapar.
+
+# Dataframe içerisindeki birden fazla kolonu yada satırı listelemek
+
+print(df_nufus[["Bolge","Sehir"]]) # Bölge ve şehir kolonları dataframe olarak geldi.
+
+print(df_nufus[0:10]) # ilk 10 satırı listeler burada çift tırnak çalışmaz sonucu dataframe olarak verir
+print(type(df_nufus[0:10])) # 'pandas.core.frame.DataFrame'
+
+# loc & iloc => loc label tabanlı "kolonların isimlerini verek" iloc ise sayı tabanlı "kolon ve satırların sıra numarasını vererek sorgulama sağlar"
+#print(df_nufus.loc["Bolge"])
 
